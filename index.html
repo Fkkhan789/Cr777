@@ -1,26 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MB-Style Adventure Game</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diamond OP TopUp</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://i.imgur.com/wWzX9uO.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .container {
+      background-color: rgba(0, 0, 0, 0.8);
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #00ffe0;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #00ffe0;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 20px;
+      background: #00ffe0;
+      color: black;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #00bfa5;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      color: #00ffe0;
+      font-size: 18px;
+    }
+    li {
+      margin: 10px 0;
+      background: rgba(255,255,255,0.1);
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px #00ffe0;
+    }
+  </style>
 </head>
 <body>
-    <div class="game-container">
-        <canvas id="gameCanvas"></canvas>
-        <div class="stats">
-            <div class="score">Score: <span id="score">0</span></div>
-            <div class="health-bar">
-                <div class="health-fill" id="health"></div>
-            </div>
-        </div>
-        <div class="mobile-controls">
-            <button class="btn-left">←</button>
-            <button class="btn-right">→</button>
-            <button class="btn-jump">↑</button>
-        </div>
-    </div>
-    <script src="game.js"></script>
-</body>
-</html>
+  <div class="container">
+    <h1>💎 Free Fire Diamond TopUp 💎</h1><h2>💰 Top-Up Packages 💰</h2>
+<ul>
+  <li>💰 Rs 100 – 100 💎 Diamonds</li>
+  <li>💰 Rs 310 – 310 💎 Diamonds</li>
+  <li>💰 Rs 520 – 520 💎 Diamonds</li>
+  <li>💰 Rs 1060 – 1060 💎 Diamonds</li>
+  <li>💰 Rs 2180 – 2180 💎 Diamonds</li>
+  <li>🔥 Rs 500 – 400 💎 Diamonds</li>
+  <li>🔥 Rs 1000 – 850 💎 Diamonds</li>
+</ul>
+
+<form id="topupForm">
+  <label>🎮 Player UID:</label>
+  <input type="text" id="uid" required />
+
+  <label>🧑‍💼 Player Name (Optional):</label>
+  <input type="text" id="name" />
+
+  <label>💎 Select Diamonds:</label>
+  <select id="diamonds" required>
+    <option value="100">100 💎</option>
+    <option value="310">310 💎</option>
+    <option value="520">520 💎</option>
+    <option value="1060">1060 💎</option>
+    <option value="2180">2180 💎</option>
+    <option value="400">400 💎 (Rs 500)</option>
+    <option value="850">850 💎 (Rs 1000)</option>
+  </select>
+
+  <label>💳 Payment Method:</label>
+  <select id="paymentMethod">
+    <option value="Easypaisa">Easypaisa</option>
+  </select>
+
+  <label>📱 Sender Number:</label>
+  <input type="text" id="sender" required />
+
+  <label>📷 Upload Screenshot (Optional):</label>
+  <input type="file" accept="image/*" />
+
+  <button type="button" onclick="sendToWhatsApp()">📩 Submit on WhatsApp</button>
+</form>
+
+  </div>  <script>
+    function sendToWhatsApp() {
+      const uid = document.getElementById('uid').value;
+      const name = document.getElementById('name').value;
+      const diamonds = document.getElementById('diamonds').value;
+      const paymentMethod = document.getElementById('paymentMethod').value;
+      const sender = document.getElementById('sender').value;
+
+      const message = `*Free Fire Top-Up Request*%0A🎮 UID: ${uid}%0A🧑‍💼 Name: ${name}%0A💎 Diamonds: ${diamonds}%0A💳 Payment Method: ${paymentMethod}%0A📱 Sender Number: ${sender}`;
+
+      window.open(`https://wa.me/03020350825?text=${message}`, '_blank');
+    }
+  </script></body>
+                          </html>
